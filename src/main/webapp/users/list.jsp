@@ -26,13 +26,15 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
+                        <th>L.p.</th>
                         <th>Id</th>
                         <th>Nazwa użytkownika</th>
                         <th>Email</th>
                         <th>Akcja</th>
                     </tr>
-                    <c:forEach items="${users}" var="user">
+                    <c:forEach items="${users}" var="user" varStatus="theCount">
                         <tr>
+                            <td>${theCount.count}</td>
                             <td>${user.id}</td>
                             <td>${user.username}</td>
                             <td>${user.email}</td>
